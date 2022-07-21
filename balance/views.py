@@ -7,13 +7,13 @@ def inicio():
 
 
 @app.route("/Compras", methods=["GET", "POST"])
-def nuevo():
-    return "Crear Compras"
+def nuevo(id):
+    return f"Crear Compras"
 
-@app.route("/Estado", methods=["GET", "POST"])
-def actualizar():
-    return "Actualizar Estado"
+@app.route("/Estado/<int:id>", methods=["GET", "POST"])
+def actualizar(id):
+    return f"Actualizar Estado con el ID={id}"
 
-@app.route("/borrar", methods=["GET", "POST"])
-def eliminar():
-    return "Eliminar movimiento"
+@app.route("/borrar/<int:id>", methods=["GET", "POST"])
+def eliminar(id):
+    return f"Eliminar el movimiento {id}"
